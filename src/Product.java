@@ -20,8 +20,13 @@ public class Product {
 	public String getSku() {
 		return sku;
 	}
+	
 	public void setSku(String sku) {
 		this.sku = sku;
 	} 
 	
+	public String getStyle()
+	{
+		return sku.substring(0, 6);
+	}
 }
