@@ -41,7 +41,8 @@ public class Pos {
 	        	mypos.viewProducts();
 	        	break;
 	        case 2:
-	        	System.out.println("Enter Product Sku");	        	
+	        	System.out.println("Enter Product Sku");
+	        	
 	        	String sku = br.readLine();
 	        	break;
 	        case 3:
