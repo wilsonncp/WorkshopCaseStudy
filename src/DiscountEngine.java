@@ -24,6 +24,9 @@ public class DiscountEngine {
 				productPrices[i-1] = 0;
 				productPrices[i]   = 25;
 			}
+			else {
+				productPrices[i] = ProductList.get(i).getPrice();
+			}
 		}
 		return productPrices;
 	}
