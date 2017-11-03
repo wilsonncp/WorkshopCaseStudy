@@ -5,18 +5,18 @@ public class CustomerPurchase {
 
 	public CustomerPurchase()
 	{
-		products = new ArrayList<Product>(); 
+		products =  new HashMap<String, Product>(); 
 	}
 	
 	public void addProduct(Product newProduct)
 	{
-		products.add(newProduct);
+		products.put(newProduct.getStyle(), newProduct);
 	}
 	
-	public ArrayList<Product> getProducts()
+	public HashMap<String, Product> getProducts()
 	{
 		return products;
 	}
 	
-	private ArrayList<Product> products;
+	HashMap<String, Product> products;
 }
