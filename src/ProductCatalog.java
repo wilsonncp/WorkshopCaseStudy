@@ -16,7 +16,12 @@ public class ProductCatalog {
 		products.add(new Product("ABB-CCC-GRE-L", 20.00));
 		products.add(new Product("ABB-CCC-GRE-M", 20.00));
 		products.add(new Product("ABB-CCC-RED-L", 20.00));
-		products.add(new Product("AAA-BBB-RED-M", 20.00));
+		products.add(new Product("ABB-CCC-RED-M", 20.00));
+		
+		products.add(new Product("WOM-SOC-GRE-L", 20.00));
+		products.add(new Product("WOM-SOC-GRE-M", 20.00));
+		products.add(new Product("WOM-SOC-RED-L", 20.00));		
+		products.add(new Product("WOM-SOC-RED-M", 20.00));
 	}	
 
 	public ArrayList<Product> getProducts()
