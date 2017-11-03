@@ -15,7 +15,7 @@ public class Pos {
 		}
 	}
 	
-	public void displayOrderSummary(CustomerPurchase cp) { 
+	public void displayOrderSummary() { 
 	
 	}
 	
@@ -63,7 +63,16 @@ public class Pos {
 	    		}	    	        
 	        	break;
 	        case 3: 
-	        	mypos.displayOrderSummary(cp);
+	        	//mypos.displayOrderSummary(cp);
+	        	double totalPrice = 0.0;
+	    		System.out.println("Checking out the following items:");	        	
+	        	HashMap<String, Product> order = cp.getProducts();
+	        	for (Product prod : order.values())
+	        	{
+	        		System.out.println(prod.getSku() + ", price: " + prod.getPrice());
+	        		totalPrice += prod.getPrice();
+	        	}
+	        	System.out.println("Total price: " + totalPrice);
 	        	break;
 	        default:
 	        	break;
