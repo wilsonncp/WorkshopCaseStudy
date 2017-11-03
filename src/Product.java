@@ -2,18 +2,18 @@
 public class Product {
 
 	private String sku;
-	private int price;
+	private double price;
 	
-	public Product(String sku, int price)
+	public Product(String sku, double d)
 	{
 		this.sku = sku;
-		this.price = price;
+		this.price = d;
 	}
 	
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	
