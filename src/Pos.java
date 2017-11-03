@@ -2,6 +2,7 @@ import java.awt.print.Book;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 
 public class Pos {
 
@@ -14,8 +15,8 @@ public class Pos {
 		}
 	}
 	
-	public void displayOrderSummary() {
-		
+	public void displayOrderSummary(CustomerPurchase cp) { 
+	
 	}
 	
     public static void main(String[] args) throws IOException { 
@@ -62,6 +63,7 @@ public class Pos {
 	    		}	    	        
 	        	break;
 	        case 3: 
+	        	mypos.displayOrderSummary(cp);
 	        	break;
 	        default:
 	        	break;
