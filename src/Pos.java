@@ -1,3 +1,4 @@
+import java.awt.print.Book;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,6 +23,9 @@ public class Pos {
         int input = 1;
         
         Pos mypos = new Pos();        
+        ProductCatalog pc = new ProductCatalog();
+        CustomerPurchase cp = new CustomerPurchase();
+        
         while (input != 0)
         {
 	        System.out.println("1: View Products");
@@ -41,16 +45,28 @@ public class Pos {
 	        	mypos.viewProducts();
 	        	break;
 	        case 2:
-	        	System.out.println("Enter Product Sku");
-	        	
+	        	System.out.println("Enter Product Sku");	        	
 	        	String sku = br.readLine();
+	        	boolean found = false;
+	    		for (Product p : pc.getProducts()) {
+	    			if (p.getSku().equalsIgnoreCase(sku))
+	    			{
+	    				cp.addProduct(p);
+	    				found = true;
+	    				System.out.println("Added " +  p.getSku()); 
+	    			}
+	    		}
+	    		if (!found)
+	    		{
+	    			System.out.println("Item " + sku + " not found in catalog");
+	    		}	    	        
 	        	break;
-	        case 3:
+	        case 3: 
 	        	break;
 	        default:
 	        	break;
 	        }
-	        System.out.println("Goodbye");
         }
+        System.out.println("Goodbye");
     } 
 }
